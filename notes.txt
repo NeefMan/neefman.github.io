@@ -1,0 +1,6 @@
+container-fluid takes up entire screen width.
+p-[#1-5] means padding
+bg-[color] controls color
+text-[color] controls color
+use text-center to center text
+use row and col to make use of bootstrap grid
