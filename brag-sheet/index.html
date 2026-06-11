@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh">
-    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-between px-4">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-between px-4 border-bottom">
         <a href="/" class="navbar-brand">Ethan Lahr</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -27,15 +27,16 @@
         </div>
     </nav>
 
-    <div class="container mt-5" style="max-width: 750px;">
+    <div class="container my-5" style="max-width: 750px;">
         <h1>Brag Sheet</h1>
-        <div class="card rounded-3 shadow">
+        <div class="card rounded-3 shadow mb-5">
             <div class="card-header d-flex align-items-center gap-3 mb-3 py-3">
                 <img src="/Assets/pawn-svgrepo-com.svg" alt="Chess Pawn" width="30">
                 <h5 class="card-title mb-0">Networked Chess</h5>
             </div>
             <div class="card-body">
-                <p>A fully playable two-player chess game over the internet, built with Pygame and TCP sockets. Uses an AWS EC2 instance as a relay server so two clients can connect and play in real time. No game-networking library was utilized for this project. The entire network for the game was programmed from scratch with raw TCP sockets. All chess logic was also programmed from the ground up.</p>
+                <p>I built a fully playable two-player chess game over the internet, built with Pygame and TCP sockets. Uses an AWS EC2 instance as a relay server so two clients can connect and play in real time. No game-networking library was utilized for this project. The entire network for the game was programmed from scratch with raw TCP sockets. All chess logic was also programmed from the ground up.</p>
+                <p>Honestly, the chess logic was the easier part. The main takeaway is that I learned how networking works in practice, how to deal with packet fragmentation, timing, and making sure threads aren't interfering with each other.</p>
             </div>
             <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
                 <div class="d-flex flex-wrap gap-2">
@@ -45,6 +46,49 @@
                     <span class="badge rounded-pill text-bg-dark px-3 py-2">AWS EC2</span>
                 </div>
                 <a href="https://github.com/NeefMan/chess" target="_blank" class="badge text-bg-primary px-3 py-2 rounded-3 d-flex gap-2 align-items-center justify-content-center text-decoration-none">
+                    <img width="20" src="/Assets/github-svgrepo-com.svg" alt="GitHub Logo">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="card rounded-3 shadow mb-5">
+            <div class="card-header d-flex align-items-center gap-3 mb-3 py-3">
+                <img src="/Assets/cube-svgrepo-com.svg" alt="Chess Pawn" width="30">
+                <h5 clas    s="card-title mb-0">3D Renderer</h5>
+            </div>
+            <div class="card-body">
+                <p>I built a 3D renderer from scratch in JavaScript using just HTML5 canvas, no libraries. It implements the full graphics pipeline, rotation, translation, camera transform, near plane clipping, perspective projection, and viewport mapping, with the trickiest part being transformation order, since rotating before translating keeps an object spinning in place rather than orbiting the origin.</p>
+                <p>What I learned was that perspective itself boils down to one operation, dividing x and y by z, and that building this by hand made the math feel a lot less like magic and more lik a sequence of mathematical transformations applied to vectors</p>
+            </div>
+            <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge rounded-pill text-bg-dark px-3 py-2">Javascript</span>
+                    <span class="badge rounded-pill text-bg-dark px-3 py-2">HTML5 Canvas</span>
+                </div>
+                <a href="https://github.com/NeefMan/3d-Graphics-Simulation" target="_blank" class="badge text-bg-primary px-3 py-2 rounded-3 d-flex gap-2 align-items-center justify-content-center text-decoration-none">
+                    <img width="20" src="/Assets/github-svgrepo-com.svg" alt="GitHub Logo">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="card rounded-3 shadow">
+            <div class="card-header d-flex align-items-center gap-3 mb-3 py-3">
+                <img src="/Assets/leaf.svg" alt="Chess Pawn" width="30">
+                <h5 class="card-title mb-0">Leaf Veination Simulation</h5>
+            </div>
+            <div class="card-body">
+                <p>I built a leaf venation simulation in JavaScript using canvas, based on the space colonization algorithm. Random "auxin" points are scattered across the canvas, and each vein node grows toward the average direction of its nearby auxins, with auxins getting consumed once a vein gets close enough, causing the network to branch organically as it spreads. The interesting part was seeing how a few simple rules, nearest-neighbor attraction and proximity-based removal, produce branching patterns that look strikingly like real leaf veins or root systems without any explicit branching logic.</p>
+                <p>What I learned was how emergent complexity works: none of the individual rules describe a "branch" directly, but the branching pattern emerges naturally from many points all pulling on the vein network at once.</p>
+            </div>
+            <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge rounded-pill text-bg-dark px-3 py-2">Javascript</span>
+                    <span class="badge rounded-pill text-bg-dark px-3 py-2">HTML5 Canvas</span>
+                    <span class="badge rounded-pill text-bg-dark px-3 py-2">Space Colonization Algorithm</span>
+                </div>
+                <a href="https://github.com/NeefMan/Leaf-Venation-Simulation" target="_blank" class="badge text-bg-primary px-3 py-2 rounded-3 d-flex gap-2 align-items-center justify-content-center text-decoration-none">
                     <img width="20" src="/Assets/github-svgrepo-com.svg" alt="GitHub Logo">
                     View on GitHub
                 </a>
