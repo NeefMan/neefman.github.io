@@ -57,8 +57,7 @@
                 <h5 class="card-title mb-0">3D Renderer</h5>
             </div>
             <div class="card-body">
-                <p>I built a 3D renderer from scratch in JavaScript using just HTML5 canvas, no libraries. It implements the full graphics pipeline, rotation, translation, camera transform, near plane clipping, perspective projection, and viewport mapping, with the trickiest part being transformation order, since rotating before translating keeps an object spinning in place rather than orbiting the origin.</p>
-                <p>What I learned was that perspective itself boils down to one operation, dividing x and y by z, and that building this by hand made the math feel a lot less like magic and more lik a sequence of mathematical transformations applied to vectors</p>
+                <p>How does a 3D scene become a 2D image without a graphics library? This project explores that question by implementing a simple 3D rendering pipeline from scratch in JavaScript. Using an interactive wireframe cube displayed on an HTML canvas, it demonstrates the mathematics behind 3D rotation, near-plane clipping, perspective projection, and screen-coordinate transformations.</p>
             </div>
             <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
                 <div class="d-flex flex-wrap gap-2">
@@ -78,8 +77,7 @@
                 <h5 class="card-title mb-0">Leaf Veination Simulation</h5>
             </div>
             <div class="card-body">
-                <p>I built a leaf venation simulation in JavaScript using canvas, based on the space colonization algorithm. Random "auxin" points are scattered across the canvas, and each vein node grows toward the average direction of its nearby auxins, with auxins getting consumed once a vein gets close enough, causing the network to branch organically as it spreads. The interesting part was seeing how a few simple rules, nearest-neighbor attraction and proximity-based removal, produce branching patterns that look strikingly like real leaf veins or root systems without any explicit branching logic.</p>
-                <p>What I learned was how emergent complexity works: none of the individual rules describe a "branch" directly, but the branching pattern emerges naturally from many points all pulling on the vein network at once.</p>
+                <p>Leaf veins form branching networks as they grow toward sources of growth signals. This browser-based JavaScript simulation models that process using a simple growth algorithm. Pressing the spacebar generates new attraction points and advances a network of vein points toward them. The result demonstrates how a simple algorithm can produce complex branching vein patterns resembling those found in real leaves.</p>
             </div>
             <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
                 <div class="d-flex flex-wrap gap-2">
