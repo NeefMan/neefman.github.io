@@ -35,8 +35,7 @@
                 <h5 class="card-title mb-0">Networked Chess</h5>
             </div>
             <div class="card-body">
-                <p>I built a fully playable two-player chess game over the internet, built with Pygame and TCP sockets. Uses an AWS EC2 instance as a relay server so two clients can connect and play in real time. No game-networking library was utilized for this project. The entire network for the game was programmed from scratch with raw TCP sockets. All chess logic was also programmed from the ground up.</p>
-                <p>Honestly, the chess logic was the easier part. The main takeaway is that I learned how networking works in practice, how to deal with packet fragmentation, timing, and making sure threads aren't interfering with each other.</p>
+                <p>Playing chess from two separate programs requires a way to pair players and keep their boards in sync. Networked Chess is a Python prototype that pairs two players by username through a TCP relay and displays each player's board with Pygame. It demonstrates socket communication, concurrent connections, and client-side game state without a chess engine or networking framework.</p>
             </div>
             <div class="card-footer p-3 gap-3 d-flex flex-column flex-sm-row justify-content-between align-items-center">
                 <div class="d-flex flex-wrap gap-2">
